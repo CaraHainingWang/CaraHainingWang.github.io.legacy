@@ -1,2 +1,13 @@
 name: Haining Wang
 markdown: kramdown
+collections:
+  publications:
+    output: true
+  experiences:
+    output: true
+  courseProj:
+    output: true
+  projects:
+    output: true
+  internProj:
+    output: true

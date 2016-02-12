@@ -1,0 +1,125 @@
+---
+layout: default
+title: Projects
+---
+
+{% assign projects = (site.projects | sort: 'idx') %}
+{% assign intern_projects = (site.internProj | sort: 'idx') %}
+
+
+<div class="col-md-3" id="leftCol">	
+
+	<div class="nav nav-stacked" id="sidebar1">
+		<button class="btn btn-link" data-toggle="collapse" data-target="#demo">Research Projects</button>
+
+		<div id="demo" class="collapse in">
+			<ul>
+				{% for proj in projects %}
+        			<li><a href="#research{{ proj.idx }}">{{ proj.title }} </a></li>
+        		{% endfor %}
+			</ul>
+		</div>
+
+		<button class="btn btn-link" data-toggle="collapse" data-target="#intern"> Intern Projects </button>
+		<div id="intern" class="collapse"> 
+			<ul>
+        		{% for proj in intern_projects %}
+        			<li><a href="#intern{{ proj.idx }}">{{ proj.title }} </a></li>
+        		{% endfor %}
+			</ul>
+		</div>
+
+		<button class="btn btn-link" data-toggle="collapse" data-target="#course"> Course Projects </button>		
+		<div id="course" class="collapse">
+			<ul>
+				{% for proj in site.courseProj  %}
+					<li><a href="#{{ proj.title }}"> {{ proj.title }}</a></li>
+				{% endfor %}		
+			</ul>
+		</div>
+	</div>
+	<!--<div class="panel-group" id="sidebar1" id="demo">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#demo" href="#research">Research Projects</a>
+        </h4>
+      </div>
+      <div id="research" class="panel-collapse collapse in">
+        <div class="panel-body">
+        	{% for proj in projects %}
+        		<li><a href="#research{{ proj.idx }}">{{ proj.title }} </a></li>
+        	{% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#sidebar1" href="#intern">Intern Projects</a>
+        </h4>
+      </div>
+      <div id="intern" class="panel-collapse collapse">
+        <div class="panel-body">
+        	{% for proj in intern_projects %}
+        		<li><a href="#intern{{ proj.idx }}">{{ proj.title }} </a></li>
+        	{% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#sidebar" href="#collapse3">Collapsible Group 3</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  </div> 
+</div>-->
+	<!--<ul class="nav nav-stacked" id="sidebar1">
+		<li><a href="#research">Research Projects</a><li>
+		<ul class="nav bd-sidenav"> 
+			{% for proj in projects %}
+				<li> <a href="#research{{ forloop.index }}">{{ proj.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</ul>-->
+</div>
+
+<div class="col-md-9" id="rightCol">
+<h2>Research Projects</h2>
+{% for proj in projects %} 
+	<h3 id="research{{ proj.idx }}">{{ proj.title }}</h3>
+	<p><font color="A52A2A"><b>Keywords:</b>{{ proj.Keywords }}</font></p>
+	{{ proj.content }}
+{% endfor %}
+
+<h2>Intern Projects</h2>
+{% for proj in intern_projects %} 
+	<h3 id="intern{{ proj.idx }}">{{ proj.title }}</h3>
+	<p><font color="A52A2A"><b>Keywords:</b>{{ proj.Keywords }}</font></p>
+	{{ proj.content }}
+{% endfor %}
+
+<h2>Course Projects </h2>
+{% for proj in site.courseProj  %}
+   <h3>{{ proj.title }}</h3>
+   <p> {{  proj.content  }}</p>
+{% endfor %}
+
+</div>
+<!-- <h2>Hobby Projects</h2>
+<h3>Python Projects</h3>
+<ul>
+    <li> Interactive Python Programming Using CodeSculptor</li>
+</ul>
+<h3> Swift Projects </h3>
+<h3> C++ Projects</h3>
+-->
+
+
