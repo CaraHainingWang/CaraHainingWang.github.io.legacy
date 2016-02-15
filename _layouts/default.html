@@ -12,7 +12,41 @@
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+
+    <style>
+        footer {
+          background-color: #f2f2f2;
+          padding: 15px;
+        }
+
+        .container-fluid {
+           padding-bottom: 100px;
+           margin-left: 0;
+        }
+        #sidebar1 {
+          padding-bottom: 80px;
+          padding-right: 10px;
+          margin-left: 0;
+        }
+        .col-md-3 {
+          margin-left:0;
+
+        }
+
+        .painting img {
+          background: #F3F4F5;
+          border: 1px solid #DEDFE0;
+        padding: 15px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+    </style>
+		
 	</head>
 	<body>
 <nav class="navbar navbar-default navbar-fixed-top" role="banner">
@@ -76,28 +110,17 @@
 <!--</div> --><!--/masthead-->
 
 <!--main-->
-<div class="container">
+<div class="container-fluid">
 
   
 	<div class="row">
     {{ content }}
-      <!--<div class="col-md-3" id="leftCol">
-        <ul class="nav nav-stacked" id="sidebar">
-          {{ sectionContent }}
-          <li><a href="#sec0">Section 0</a></li>
-          <li><a href="#sec1">Section 1</a></li>
-          <li><a href="#sec2">Section 2</a></li>
-          <li><a href="#sec3">Section 3</a></li>
-          <li><a href="#sec4">Section 4</a></li>
-        </ul>
-      </div>
-      
-      <div class="col-md-9">
-         {{ content }}
-      </div>-->
   </div><!--/row-->
 </div><!--/container-->
 
+<footer class="navbar-fixed-bottom  text-center">
+  <p><small>© Copyright 2016, Haining Wang</small></p>
+</footer>
 
 
 	<!-- script references -->

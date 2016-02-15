@@ -13,24 +13,34 @@ first time and this year, the story goes on to drawing  some watercolor painting
 Painting is such a relaxing and rewarding creative procedure and it can change the way you see the world! 
 </p>
 
-<div class="painting">
-	<figure>
-		<img src="../../../images/IMG_2322.JPG" alt="image post" width="180px">
-		<figcaption>Red Flowers (5-9-2015)	</figcaption>
-	</figure>
-	<figure>	
-		<img src="../../../images/IMG_2333.JPG" alg="image post" width="275px">
+<div class="paiting">
+	<div class="row">
+		<div class="col-md-3">
+			<figure>
+			<img src="../../../images/IMG_2322.JPG" alt="image post" height="250px">
+			<figcaption>Red Flowers (5-9-2015)	</figcaption>
+			</figure>
+			<figure>
+					<img src="../../../images/IMG_2364.JPG" alt="image post" height="250px">
+				<figcaption>White Flowers (5-23-2015)</figcaption>	
+				</figure>
+		</div>
+		<div class="col-md-1">
+		</div>
+		<div class="col-md-4">
+			<figure>
+		<img src="../../../images/IMG_2333.JPG" alt="image post" height="250px">
 		<figcaption>Woods in the Light (5-16-2015)</figcaption>	
-	</figure>				
-	<figure>
-		<img src="../../../images/IMG_2364.JPG" alg="image post" width="180px">
-		<figcaption>White Flowers (5-23-2015)</figcaption>		 	
 	</figure>
 	<figure>
-		<img src="../../../images/IMG_2386.JPG" alg="image post" width ="275px">
-		<figcaption>Winter's Footprint (Repainting Ivgeny Lushpin's masterpiece using warmer hues) (5-30-2015)</figcaption>
-	</figure>
+				<img src="../../../images/IMG_2386.JPG" alt="image post" height="250px">
+		<figcaption>Winter's Footprint (Repainting Ivgeny Lushpin's masterpiece using warmer hues) (5-30-2015)</figcaption>		
+		</figure>	
+		</div>
+
+	</div>
 </div>
+
 			
 
 
