@@ -14,12 +14,20 @@ body {
  padding-top:50px;
 }
 
-#masthead { 
+#masthead {
  min-height:250px;
+ font-family: "Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+ //"Sans-serif", arial;
 }
 
 #masthead h1 {
  font-size: 30px;
+ line-height: 1;
+ padding-top:20px;
+}
+
+#masthead h2 {
+ font-size: 20px;
  line-height: 1;
  padding-top:20px;
 }
@@ -36,6 +44,19 @@ body {
   overflow-y: scroll;
 }
 
+#sidebar1 {
+  background-color: #f1f1f1;
+}
+
+#sidebar1 button {
+  height:60px;
+  line-height:60px;
+}
+
+#sidebar1 li {
+  padding-right: 20px;
+}
+
 .painting img {
     background: #F3F4F5;
     border: 1px solid #DEDFE0;
@@ -48,6 +69,24 @@ body {
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
+.jumbotron p {
+  font-size: 16px;
+}
+
+.row {
+  font-size: 15px;
+  top-padding: 20px;
+  right-padding:20px;
+  font-family: "Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+  text-align:justify;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+}
 
 @media screen and (min-width: 768px) {
   #masthead h1 {
@@ -62,6 +101,7 @@ body {
 
 .affix-top,.affix{
  position: static;
+ background-color: #f1f1f1;
 }
 
 
@@ -72,7 +112,7 @@ body {
     background-color: #f1f1f1;
     height: 850px;
   }
-  
+
   #sidebar.affix {
     position: fixed;
     width:228px;
@@ -86,6 +126,7 @@ body {
     position:fixed;
     width: 25%;
   }*/
+
   #sidebar1 {
     padding-top:20px;
     padding-left:7px;
@@ -95,9 +136,9 @@ body {
     background-color: #f1f1f1;
     height: 100%;
     overflow-y: scroll;
-  }  
+    width:20%;
+  }
 }
-
 
 
 #sidebar li.active {

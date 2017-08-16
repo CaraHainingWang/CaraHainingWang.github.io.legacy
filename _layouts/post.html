@@ -23,14 +23,14 @@
            padding-bottom: 100px;
            margin-left: 0;
         }
-        #sidebar1 {
+        /*#sidebar1 {
           padding-bottom: 80px;
           padding-right: 10px;
           margin-left: 0;
-        }
+        }*/
         .col-md-3 {
           margin-left:0;
-
+					font-size: 20px;
         }
 
         img {
@@ -91,7 +91,7 @@
   </div>
 </nav>
 
-<!--<div id="masthead">  
+<!--<div id="masthead">
   <div class="container">
       <div class="row">
         <div class="col-md-7">
@@ -100,7 +100,7 @@
           </h1>
         </div>
         <div class="col-md-5">
-            <div class="well well-lg"> 
+            <div class="well well-lg">
               <div class="row">
                 <div class="col-sm-6">
         	      	<img src="//placehold.it/180x100" class="img-responsive">
@@ -111,16 +111,16 @@
               </div>
             </div>
         </div>
-      </div> 
+      </div>
   </div>--><!--/container-->
 <!--</div> --><!--/masthead-->
 
 <!--main-->
 <div class="container-fluid">
 
-  
+
 	<div class="row">
-    <div class="col-md-3 sidenav" id="leftCol"> 
+    <div class="col-md-3 sidenav" id="leftCol">
         <ul class="nav nav-stacked" id="sidebar1">
           <li><a href="/blog">Back</a><li>
         </ul>
@@ -130,21 +130,7 @@
       <h2>{{ page.title }}</h2>
       {{ content }}
     </div>
-      <!--<div class="col-md-3" id="leftCol">
-        <ul class="nav nav-stacked" id="sidebar">
-          {{ sectionContent }}
-          <li><a href="#sec0">Section 0</a></li>
-          <li><a href="#sec1">Section 1</a></li>
-          <li><a href="#sec2">Section 2</a></li>
-          <li><a href="#sec3">Section 3</a></li>
-          <li><a href="#sec4">Section 4</a></li>
-        </ul>
-      </div>
-      
-      <div class="col-md-9">
-         {{ content }}
-      </div>-->
-  </div><!--/row-->
+  </div>
 </div><!--/container-->
 
 <footer class="container-fluid text-center">

@@ -7,7 +7,7 @@ title: Projects
 {% assign intern_projects = (site.internProj | sort: 'idx') %}
 
 
-<div class="col-md-3" id="leftCol">	
+<div class="col-md-3" id="leftCol">
 
 	<div class="nav nav-stacked" id="sidebar1">
 		<button class="btn btn-link" data-toggle="collapse" data-target="#demo">Research Projects</button>
@@ -16,25 +16,26 @@ title: Projects
 			<ul>
 				{% for proj in projects %}
         			<li><a href="#research{{ proj.idx }}">{{ proj.title }} </a></li>
-        		{% endfor %}
+        {% endfor %}
 			</ul>
 		</div>
 
+		<br/>
 		<button class="btn btn-link" data-toggle="collapse" data-target="#intern"> Intern Projects </button>
-		<div id="intern" class="collapse"> 
+		<div id="intern" class="collapse">
 			<ul>
         		{% for proj in intern_projects %}
         			<li><a href="#intern{{ proj.idx }}">{{ proj.title }} </a></li>
         		{% endfor %}
 			</ul>
 		</div>
-
-		<button class="btn btn-link" data-toggle="collapse" data-target="#course"> Course Projects </button>		
+		<br/>
+		<button class="btn btn-link" data-toggle="collapse" data-target="#course"> Course Projects </button>
 		<div id="course" class="collapse">
 			<ul>
 				{% for proj in site.courseProj  %}
-					<li><a href="#{{ proj.title }}"> {{ proj.title }}</a></li>
-				{% endfor %}		
+					<li><a href="#course{{ proj.title }}"> {{ proj.title }}</a></li>
+				{% endfor %}
 			</ul>
 		</div>
 
@@ -43,25 +44,27 @@ title: Projects
 
 <div class="col-md-9" id="rightCol">
 <h2>Research Projects</h2>
-{% for proj in projects %} 
+{% for proj in projects %}
+	<a class="anchor" id="research{{ proj.idx }}"></a>
 	<h3 id="research{{ proj.idx }}">{{ proj.title }}</h3>
 	<p><font color="A52A2A"><b>Keywords: </b>{{ proj.Keywords }}</font></p>
 	{{ proj.content }}
 {% endfor %}
 
 <h2>Intern Projects</h2>
-{% for proj in intern_projects %} 
-	<h3 id="intern{{ proj.idx }}">{{ proj.title }}</h3>
+{% for proj in intern_projects %}
+	<a class="anchor" id="intern{{ proj.idx }}"></a>
+	<h3>{{ proj.title }}</h3>
 	<p><font color="A52A2A"><b>Keywords: </b>{{ proj.Keywords }}</font></p>
 	{{ proj.content }}
 {% endfor %}
 
 <h2>Course Projects </h2>
-{% for proj in site.courseProj  %}
-   <h3>{{ proj.title }}</h3>
-   <p> {{  proj.content  }}</p>
+{% for proj in site.courseProj %}
+	<a class="anchor" id="course{{ proj.idx }}"></a>
+  <h3>{{ proj.title }}</h3>
+  <p> {{ proj.content }}</p>
 {% endfor %}
-
 </div>
 <!-- <h2>Hobby Projects</h2>
 <h3>Python Projects</h3>
@@ -71,5 +74,3 @@ title: Projects
 <h3> Swift Projects </h3>
 <h3> C++ Projects</h3>
 -->
-
-
